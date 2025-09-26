@@ -1,0 +1,10 @@
+using Xunit;
+
+namespace Unisaw.Tests;
+
+public class SmokeTests
+{
+    [Fact]
+    public void Framework_Loads() => Assert.True(true);
+}
+

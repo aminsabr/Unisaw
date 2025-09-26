@@ -16,3 +16,4 @@ D:\Dev\Unisaw\Unisaw.CLI\Unisaw.CLI\bin\Debug\net8.0\Unisaw.Core.dll
 D:\Dev\Unisaw\Unisaw.CLI\Unisaw.CLI\bin\Debug\net8.0\Unisaw.Core.pdb
 D:\Dev\Unisaw\Unisaw.CLI\Unisaw.CLI\obj\Debug\net8.0\Unisaw.CLI.csproj.AssemblyReference.cache
 D:\Dev\Unisaw\Unisaw.CLI\Unisaw.CLI\obj\Debug\net8.0\Unisaw.CLI.csproj.Up2Date
+D:\Dev\Unisaw\Unisaw.CLI\Unisaw.CLI\obj\Debug\net8.0\Unisaw.CLI.sourcelink.json
