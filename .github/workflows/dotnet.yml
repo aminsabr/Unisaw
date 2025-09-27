@@ -1,27 +1,35 @@
 name: .NET CI
+
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - '**'          # اجرا روی همهٔ برنچ‌ها
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main          # اجرا روی PRهایی که مقصدشان main است
+  workflow_dispatch:   # اجرای دستی
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: |
-            8.0.x
-            9.0.x
+          dotnet-version: '8.0.x'
+
       - name: Restore
         run: dotnet restore
+
       - name: Build
         run: dotnet build --no-restore --configuration Release
+
       - name: Test
-        run: dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test_results.trx"
+        run: dotnet test --no-build --configuration Release --logger "trx;LogFileName=test_results.trx"
+
       - name: Upload Test Results
         if: always()
         uses: actions/upload-artifact@v4
